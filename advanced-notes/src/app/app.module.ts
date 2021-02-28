@@ -6,6 +6,7 @@ import { FormNoteComponent } from './components/form-note/form-note.component';
 import { RightNoteComponent } from './components/right-note/right-note.component';
 import { LeftNoteComponent } from './components/left-note/left-note.component';
 import { MessageComponent } from './components/message/message.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MessageComponent } from './components/message/message.component';
     MessageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

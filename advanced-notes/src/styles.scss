@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+@font-face {
+    font-family: UniversalRegular;
+    src: url('./assets/fonts/Univers-LT-55-Roman.ttf');
+}
+
+@font-face {
+    font-family: UniversalBold;
+    src: url('./assets/fonts/Univers-LT-65-Bold.ttf');
+}
+

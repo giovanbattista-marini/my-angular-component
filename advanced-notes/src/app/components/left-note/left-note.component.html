@@ -1,1 +1,12 @@
-<p>left-note works!</p>
+<div class="row mb-4">
+    <div class="col-auto">
+        <img class="img-responsive" width='40' [src]="'assets/avatar/' + note.imgString + '.png'">
+    </div>
+    <div class="col-12 col-md-9">
+        <div class="d-flex justify-content-between mb-2">
+            <div class="name">{{note.author}}</div>
+            <div class="date">{{note.createdAt | date:'dd/MM/yyyy · HH:mm'}}</div>
+        </div>
+        <message [msg]='note.msg' [previewMaxLength]='100'></message> 
+    </div>
+</div>

@@ -1,1 +1,6 @@
-<p>message works!</p>
+<div class="message-container ml-2">
+    <div class="message">
+        <div>{{msg | slice:0:previewMaxLength }} <span *ngIf='msg.length > previewMaxLength'>...</span></div>
+        <div *ngIf='msg.length > previewMaxLength' class='text-primary'>Read More</div>        
+    </div>
+</div>

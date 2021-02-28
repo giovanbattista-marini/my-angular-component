@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { Note } from 'src/app/interfaces/note';
 @Component({
-  selector: 'app-left-note',
+  selector: 'left-note',
   templateUrl: './left-note.component.html',
   styleUrls: ['./left-note.component.scss']
 })
 export class LeftNoteComponent implements OnInit {
 
-  constructor() { }
+    @Input() note!: Note;
+    
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

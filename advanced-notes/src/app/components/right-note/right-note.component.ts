@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-right-note',
+  selector: 'right-note',
   templateUrl: './right-note.component.html',
   styleUrls: ['./right-note.component.scss']
 })
