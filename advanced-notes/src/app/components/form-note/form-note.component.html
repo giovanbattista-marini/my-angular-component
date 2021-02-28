@@ -1,1 +1,8 @@
-<p>form-note works!</p>
+<form [formGroup]="noteForm" (submit)='onFormSubmitted()'>
+    <div class="form-group">
+        <input type="text" class="form-control" id="msg" name="msg" formControlName="msg" placeholder="Enter note about the process">
+    </div>
+    <div class="form-group">
+        <button class="btn red-btn float-right" type="submit">Publish</button>
+    </div>
+</form>

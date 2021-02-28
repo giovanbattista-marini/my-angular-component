@@ -7,9 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MessageComponent implements OnInit {
   
-  @Input() previewMaxLength!: number;
   @Input() msg!: string;
-
+  @Input() direction!: string;
+  @Input() previewMaxLength!: number;
+  
   constructor() { }
 
   ngOnInit(): void {

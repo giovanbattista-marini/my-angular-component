@@ -1,1 +1,12 @@
-<p>right-note works!</p>
+<div class="row mb-4">
+    <div class="col offset-md-2">
+        <div class="d-flex justify-content-between mb-2">
+            <div class="name">{{note.author}}</div>
+            <div class="date">{{note.createdAt | date:'dd/MM/yyyy · HH:mm'}}</div>
+        </div>
+        <message [msg]='note.msg' direction='right' [previewMaxLength]='100'></message>
+    </div>
+    <div class="col-auto mt-4 pt-1">
+        <img class="img-responsive" width="40" src="assets/avatar/me.png">
+    </div>
+</div>

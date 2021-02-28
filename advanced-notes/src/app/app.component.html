@@ -4,12 +4,12 @@
             <div class="row">
                 <div class="col-12">
                     <left-note *ngFor='let n of notes' [note]='n'></left-note>
-                   <!-- <right-note *ngFor='let n of ownNotes' [note]='n'></right-note> -->
+                    <right-note *ngFor='let n of ownNotes' [note]='n'></right-note>
                 </div>
             </div>
         </div>
-        <div class="add-note-container col-12 mt-3">
-            <!--<form-note (formSubmitted)='addNote($event)'></app-form-note>-->
+        <div class="add-note-container col-12">
+            <form-note (formSubmitted)='addNote($event)'></form-note>
         </div>
     </div>
 </div>
