@@ -7,7 +7,7 @@ import { Note } from './interfaces/note';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
+    
     notes: Note[] = [
         {
             author: 'Francesco Rossi',
@@ -29,22 +29,21 @@ export class AppComponent implements OnInit {
         }
     ]
     ownNotes: Note[] = [];
-
+    
     constructor() { }
     
     ngOnInit(): void {
         let ownNotes = JSON.parse(localStorage.getItem("myNote") || '{}');
         if (ownNotes) {
-            ownNotes.sort((a: Note, b: Note) => (a.createdAt > b.createdAt) ? 1 : -1)
+            ownNotes.sort((a: Note, b: Note) => (a.createdAt > b.createdAt) ? 1 : -1);
             this.ownNotes = ownNotes;
         }
-        this.notes.sort((a, b) => (a.createdAt > b.createdAt) ? 1 : -1)
+        this.notes.sort((a, b) => (a.createdAt > b.createdAt) ? 1 : -1);
     }
 
     addNote(note: Note) {
-        this.ownNotes.push(note)
-        let jsonNote = JSON.stringify(this.ownNotes)
-        localStorage.setItem("myNote", jsonNote)
+        this.ownNotes.push(note);
+        let jsonNote = JSON.stringify(this.ownNotes);
+        localStorage.setItem("myNote", jsonNote);
     }
-
 }
