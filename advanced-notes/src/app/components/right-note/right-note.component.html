@@ -4,7 +4,7 @@
             <div class="name">{{note.author}}</div>
             <div class="date">{{note.createdAt | date:'dd/MM/yyyy · HH:mm'}}</div>
         </div>
-        <message [msg]='note.msg' direction='right' [previewMaxLength]='100'></message>
+        <message [msg]='note.msg' direction='right'></message>
     </div>
     <div class="col-auto mt-4 pt-1">
         <img class="img-responsive" width="40" src="assets/avatar/me.png">

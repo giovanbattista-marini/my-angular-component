@@ -1,6 +1,6 @@
 <div class="{{direction}} message-container">
     <div class="message">
-        <div>{{msg | slice:0:previewMaxLength }} <span *ngIf='msg.length > previewMaxLength'>...</span></div>
-        <div *ngIf='msg.length > previewMaxLength' class='text-primary'>Read More</div>        
+        <span #message class="line-clamp">{{msg}}</span>
+        <div *ngIf='showReadMore' (click)="showText()" class='text-primary'>Read More</div>        
     </div>
 </div>
