@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
             author: 'Francesco Rossi',
             createdAt: new Date("2020-09-01"),
             imgString: 'user1',
-            msg: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum '
+            msg: 'a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a '
         },
         {
             author: 'Paola Bianchi',
@@ -33,8 +33,8 @@ export class AppComponent implements OnInit {
     constructor() { }
     
     ngOnInit(): void {
-        let ownNotes = JSON.parse(localStorage.getItem("myNote") || '{}');
-        if (ownNotes) {
+        let ownNotes = JSON.parse(localStorage.getItem("myNote") || '[]');
+        if (ownNotes.length) {
             ownNotes.sort((a: Note, b: Note) => (a.createdAt > b.createdAt) ? 1 : -1);
             this.ownNotes = ownNotes;
         }
