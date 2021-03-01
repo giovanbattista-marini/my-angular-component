@@ -2,13 +2,28 @@
     background: white 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #C2CDDD;
 
-    .notes-container{
-        height: 485px;
-        overflow-y: auto;
-    }
-    .add-note-container {
-        height: 110px;
-        padding: 0.625rem 1.25rem 0;
-        background-color: #EFF2F7;
+    .scroll-effect {
+        &::before{
+            content: '';
+            background: transparent linear-gradient(0deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+            height: 89px;
+            display: block;
+            left: 0;
+            right: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    
+        .notes-container{
+            height: 485px;
+            overflow-y: auto;
+        }
+        .add-note-container {
+            height: 110px;
+            padding: 0.625rem 1.25rem 0;
+            background-color: #EFF2F7;
+        }
     }
 }
