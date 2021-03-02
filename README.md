@@ -1,3 +1,4 @@
 # my-angular-component
 
-# Author: Giovan Battista Marinis
+# create a component on Angular like a chat
+# Author: Giovan Battista Marini
