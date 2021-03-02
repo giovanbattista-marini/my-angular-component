@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -30,6 +31,7 @@ export class MessageComponent implements OnInit {
     * @return {void}
     */
     showText(): void{
+        this.showReadMore = false;
         this.message.nativeElement.classList.remove('line-clamp');
     }
 
