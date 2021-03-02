@@ -10,22 +10,23 @@ export class AppComponent implements OnInit {
     
     notes: Note[] = [
         {
-            author: 'Francesco Rossi',
-            createdAt: new Date("2020-09-01"),
+            author: 'Giovanni Bianchi',
+            createdAt: new Date("2020-02-28"),
             imgString: 'user1',
-            msg: 'a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a '
-        },
-        {
-            author: 'Paola Bianchi',
-            createdAt: new Date("2020-09-05"),
-            imgString: 'user2',
-            msg: 'lorem impsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum '
+            msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida ante vitae sollicitudin pulvinar. Sed maximus, ex ac viverra tempus, ex nulla condimentum est, sit amet bibendum ligula nisi eget dolor.'
         },
         {
             author: 'Carlo Verde',
-            createdAt: new Date("2020-09-02"),
+            createdAt: new Date("2020-02-25"),
             imgString: 'user3',
-            msg: 'lorem impsumlorem ipsum lorem ipsum lorem ipsum '
+            msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        }
+        ,
+        {
+            author: 'Maria Rossi',
+            createdAt: new Date("2020-02-26"),
+            imgString: 'user2',
+            msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         }
     ]
     ownNotes: Note[] = [];
@@ -33,6 +34,7 @@ export class AppComponent implements OnInit {
     constructor() { }
     
     ngOnInit(): void {
+        //parse notes and sort on attribute date
         let ownNotes = JSON.parse(localStorage.getItem("myNote") || '[]');
         if (ownNotes.length) {
             ownNotes.sort((a: Note, b: Note) => (a.createdAt > b.createdAt) ? 1 : -1);
@@ -41,6 +43,11 @@ export class AppComponent implements OnInit {
         this.notes.sort((a, b) => (a.createdAt > b.createdAt) ? 1 : -1);
     }
 
+    /**
+    * add a new note into json myNote
+    * @param {Note} note
+    * @return {void}
+    */
     addNote(note: Note) {
         this.ownNotes.push(note);
         let jsonNote = JSON.stringify(this.ownNotes);

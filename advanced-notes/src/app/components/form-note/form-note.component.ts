@@ -26,6 +26,10 @@ export class FormNoteComponent implements OnInit {
         })
     }
 
+    /**
+    * event for create a new note
+    * @return {void}
+    */
     onFormSubmitted() {
         this.noteForm.controls.createdAt.setValue(new Date());
         this.formSubmitted.emit(this.noteForm.value);
